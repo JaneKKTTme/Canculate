@@ -57,7 +57,7 @@ int main()
     struct stack *stk;
     stk = (struct stack*)malloc(sizeof(struct stack));
     init(stk);
-    char input;
+    char input='\0';
     int result=0;
     int a;
 
@@ -86,7 +86,7 @@ int main()
                 break;
             default:
                 ungetc(input,stdin);
-                if ( scanf("%d", &a) !=1 )
+                if ( scanf("%d", &a) != 1 )
                 {
                     fprintf(stderr, "Can't read integer\n");
                     return -1;
